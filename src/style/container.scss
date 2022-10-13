@@ -1,0 +1,21 @@
+@use 'partials/variables' as v;
+@use 'partials/blocks' as b;
+
+.l-container {
+    display: flex;
+    justify-content: center;
+
+    color: white;
+    line-height: 1.5;
+
+    font-family: "HarmonyOS Sans TC", sans-serif;
+}
+
+.l-container-content {
+    margin: auto 1rem;
+    width: 100%;
+
+    @include b.sm-block {
+        width: v.$sm-width;
+    }
+}
