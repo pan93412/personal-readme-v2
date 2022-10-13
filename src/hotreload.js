@@ -1,3 +1,5 @@
+/* global module */
+
 /**
  * Initiate the hot reload function for Parcel.
  */
