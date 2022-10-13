@@ -1,0 +1,28 @@
+{
+  "name": "personal-readme",
+  "version": "1.0.0",
+  "description": "The web version of my GitHub README profile.",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build",
+    "lint": "eslint && stylelint",
+    "lint:fix": "eslint --fix && stylelint --fix",
+    "fmt": "prettier -w .",
+    "fmt:c": "prettier -c ."
+  },
+  "source": "src/index.html",
+  "keywords": [],
+  "author": "pan93412",
+  "license": "AGPL-3.0-or-later",
+  "devDependencies": {
+    "@parcel/core": "^2.7.0",
+    "@parcel/transformer-sass": "^2.7.0",
+    "eslint": "^8.25.0",
+    "parcel": "^2.7.0",
+    "postcss": "^8.4.18",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.13.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard-scss": "^5.0.0"
+  }
+}
