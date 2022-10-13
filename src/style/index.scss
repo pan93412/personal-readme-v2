@@ -1,3 +1,10 @@
 @use 'body';
 @use 'container';
+
+// components
 @use 'header';
+@use 'introduction';
+@use 'skill-card';
+
+// utils
+@use 'utils';

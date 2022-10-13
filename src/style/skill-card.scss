@@ -1,0 +1,59 @@
+$base-padding: 24px;
+$gap-between-cards: $base-padding;
+$card-corner-radius: calc($base-padding / 3);
+
+@mixin card-configuration {
+    background-color: #374151;
+
+    .o-title {
+        // Title offset relative to the card.
+        left: 10px;
+        top: 10px;
+
+        opacity: 0.25;
+
+        font-size: 3em;
+    }
+}
+
+/* The cards for placing c-skill-card */
+.c-skill-cards {
+    display: flex;
+    flex-direction: column;
+    gap: $base-padding;
+}
+
+/* A card for showing my skills. */
+.c-skill-card {
+    // We set our top padding to (base-padding * 1.5)
+    // to make sure the card title can be shown, while
+    // reduce the overlap with the card text.
+    padding: $base-padding;
+    padding-top: calc($base-padding * 1.5);
+
+    border-radius: $card-corner-radius;
+
+    // Make the following title “relative” to our card.
+    position: relative;
+    overflow: hidden;  // Hide the overflowed title.
+
+    .o-title {
+        // Reset the `title` style.
+        line-height: 100%;
+        margin-block: 0 auto;
+
+        position: absolute;
+
+        // Title should be placed under the content.
+        z-index: 0;
+    }
+
+    .o-desc {
+        margin-block: 0;
+
+        // See `o-title`.
+        z-index: 1;
+    }
+
+    @include card-configuration;
+}

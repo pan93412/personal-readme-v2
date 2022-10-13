@@ -1,10 +1,8 @@
+@use 'utils';
+
 .c-header {
     .o-page-title {
-        // We don't need `h1`; we take the image as header.
-        //
-        // This title is only for screen readers,
-        // outline generators, etc.
-        display: none;
+        @extend .u-hide;
     }
 
     .o-brief-img {

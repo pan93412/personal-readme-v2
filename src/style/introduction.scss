@@ -1,0 +1,11 @@
+@use 'partials/blocks' as b;
+
+.l-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include b.sm-block {
+        flex-direction: row;
+    }
+}

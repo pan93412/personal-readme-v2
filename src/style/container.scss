@@ -1,7 +1,6 @@
 @use 'partials/variables' as v;
 @use 'partials/blocks' as b;
 
-$text-color: white;
 $line-height: 1.5;
 $font-preference:
     "HarmonyOS Sans TC", "PingFang TC", "微軟正黑體", system-ui, -apple-system,
@@ -14,7 +13,6 @@ $font-preference:
 
     margin: auto 1rem;
 
-    color: $text-color;
     line-height: $line-height;
 
     font-family: $font-preference;
