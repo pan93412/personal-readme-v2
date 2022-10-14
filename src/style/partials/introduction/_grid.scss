@@ -1,0 +1,28 @@
+@use '../blocks' as b;
+
+@mixin gridarea($name) {
+    &__#{ $name } {
+        grid-area: $name;
+    }
+}
+
+.l-main {
+    // The template optimized for mobiles.
+    grid-template:
+        "brief"
+        "skills"
+        "links"
+        "contacts";
+
+    @include b.sm-block {
+        // The template optimized for desktop.
+        grid-template:
+            "brief skills"
+            "links skills"
+            "contacts skills" / 1fr 1fr;
+    }
+
+    @each $area in (brief, skills, contacts, links) {
+        @include gridarea($area);
+    }
+}

@@ -1,33 +1,6 @@
-@use 'partials/blocks' as b;
-
-@mixin gridarea($name) {
-    &__#{ $name } {
-        grid-area: $name;
-    }
-}
+@use 'partials/introduction/grid';
 
 .l-main {
     display: grid;
-
-    // The template optimized for mobiles.
-    grid-template:
-        "brief"
-        "skills"
-        "links"
-        "contacts";
-
-    flex-direction: column;
     gap: 0 1rem;  // only column gap is needed
-
-    @include b.sm-block {
-        // The template optimized for desktop.
-        grid-template:
-            "brief skills"
-            "links skills"
-            "contacts skills" / 1fr 1fr;
-    }
-
-    @each $area in (brief, skills, contacts, links) {
-        @include gridarea($area);
-    }
 }
