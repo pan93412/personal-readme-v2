@@ -11,9 +11,9 @@ $font-preference:
     display: flex;
     justify-content: center;
 
-    margin: auto 1rem;
-
-    line-height: $line-height;
+    p, li {
+        line-height: $line-height;
+    }
 
     font-family: $font-preference;
 
