@@ -17,12 +17,22 @@
     @include b.sm-block {
         // The template optimized for desktop.
         grid-template:
-            "brief skills"
+            "brief brief"
             "links skills"
             "contacts skills" / 1fr 1fr;
     }
 
     @each $area in (brief, skills, contacts, links) {
         @include gridarea($area);
+    }
+
+    // brief: center and smaller width
+    &__brief {
+        text-align: center;
+        margin: 0.5rem auto;
+
+        @include b.sm-block {
+            width: 75%;
+        }
     }
 }
