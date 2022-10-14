@@ -10,7 +10,7 @@ $card-corner-radius: calc($base-padding / 3);
         left: 10px;
         top: 10px;
 
-        opacity: 0.25;
+        opacity: 0.2;
 
         font-size: 3em;
     }
@@ -25,11 +25,11 @@ $card-corner-radius: calc($base-padding / 3);
 
 /* A card for showing my skills. */
 .c-skill-card {
-    // We set our top padding to (base-padding * 1.5)
+    // We set our top padding to (base-padding * 1.6)
     // to make sure the card title can be shown, while
     // reduce the overlap with the card text.
     padding: $base-padding;
-    padding-top: calc($base-padding * 1.5);
+    padding-top: calc($base-padding * 1.6);
 
     border-radius: $card-corner-radius;
 
