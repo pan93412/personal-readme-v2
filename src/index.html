@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduce Pan93412</title>
 
-    <!-- Font: HarmonyOS Sans TC -->
+    <!-- Preconnects -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Font: HarmonyOS Sans TC -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/ikki2000/harmonyos-fonts@620f0e2/css/harmonyos_sans_tc.css"
     />
+
+    <!-- Font: IBM Plex Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="style/index.scss" />
@@ -76,7 +83,7 @@
           <section class="l-main__links">
             <h2>個人連結</h2>
 
-            <ul>
+            <ul class="l-main__links_list">
               <li>導向 GitHub 的連結：<a class="h-autolink">https://pan93.com</a></li>
               <li>blog: <a class="h-autolink">https://blog.pan93.com</a></li>
             </ul>
@@ -85,7 +92,7 @@
           <section class="l-main__contacts">
             <h2>聯絡方式</h2>
 
-            <ul>
+            <ul class="l-main__contacts__list">
               <li>
                 Twitter:
                 <a href="https://twitter.com/byStarTW" rel="nofollow"
@@ -124,6 +131,22 @@
                 Email: <a href="mailto:gh@pan93.com">gh at pan93 dot com</a>
               </li>
             </ul>
+          </section>
+
+          <section class="l-main__sponsor">
+            <h2 class="u-hide">支持資訊</h2>
+
+            <p>有興趣支持我在 OSS 做出的貢獻嗎？你可以透過以下的方式贊助我：</p>
+
+            <ul class="l-main__sponsor__methods">
+              <li>ETH: <code>0xEa6387e8F2B756F173563e6F8A70aDF51406DDe9</code></li>
+              <li>
+                也支援 PayPal 等方式，
+                Email: <a href="mailto:gh@pan93.com">歡迎來信詢問 owo</a>
+              </li>
+            </ul>
+
+            <p>非常感謝！</p>
           </section>
         </main>
       </div>
