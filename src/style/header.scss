@@ -1,11 +1,11 @@
 @use 'utils';
 
 .c-header {
-    .o-page-title {
+    &__title {
         @extend .u-hide;
     }
 
-    .o-brief-img {
+    &__img {
         width: 100%;
     }
 }

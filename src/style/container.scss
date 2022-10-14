@@ -16,12 +16,12 @@ $font-preference:
     line-height: $line-height;
 
     font-family: $font-preference;
-}
 
-.l-container-content {
-    width: 100%;
+    &__content {
+        width: 100%;
 
-    @include b.sm-block {
-        width: v.$sm-width;
+        @include b.sm-block {
+            width: v.$sm-width;
+        }
     }
 }

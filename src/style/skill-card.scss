@@ -5,7 +5,7 @@ $card-corner-radius: calc($base-padding / 3);
 @mixin card-configuration {
     background-color: #374151;
 
-    .o-title {
+    &__title {
         // Title offset relative to the card.
         left: 10px;
         top: 10px;
@@ -16,8 +16,8 @@ $card-corner-radius: calc($base-padding / 3);
     }
 }
 
-/* The cards for placing c-skill-card */
-.c-skill-cards {
+/* The layout for placing c-skill-card */
+.l-skill-cards {
     display: flex;
     flex-direction: column;
     gap: $base-padding;
@@ -37,7 +37,7 @@ $card-corner-radius: calc($base-padding / 3);
     position: relative;
     overflow: hidden;  // Hide the overflowed title.
 
-    .o-title {
+    &__title {
         // Reset the `title` style.
         line-height: 100%;
         margin-block: 0 auto;
@@ -48,7 +48,7 @@ $card-corner-radius: calc($base-padding / 3);
         z-index: 0;
     }
 
-    .o-desc {
+    &__desc {
         margin-block: 0;
 
         // See `o-title`.
