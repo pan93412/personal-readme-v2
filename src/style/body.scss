@@ -5,6 +5,10 @@ body {
 
 a {
     color: rgb(169, 182, 242);
+
+    &::before {
+        content: " ";
+    }
 }
 
 // We use '!important' here to override
