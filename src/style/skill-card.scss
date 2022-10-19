@@ -21,6 +21,10 @@ $card-corner-radius: calc($base-padding / 3);
     gap: $base-padding;
 }
 
+.l-still-cards--row {
+    flex-direction: row;
+}
+
 /* A card for showing my skills. */
 .c-skill-card {
     padding: $base-padding;
