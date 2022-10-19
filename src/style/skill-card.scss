@@ -9,9 +9,7 @@ $card-corner-radius: calc($base-padding / 3);
         // Title offset relative to the card.
         left: 10px;
         top: 10px;
-
         opacity: 0.2;
-
         font-size: 3em;
     }
 }
@@ -26,7 +24,6 @@ $card-corner-radius: calc($base-padding / 3);
 /* A card for showing my skills. */
 .c-skill-card {
     padding: $base-padding;
-
     border-radius: $card-corner-radius;
 
     // Make the following title “relative” to our card.
@@ -37,7 +34,6 @@ $card-corner-radius: calc($base-padding / 3);
         // Reset the `title` style.
         line-height: 100%;
         margin-block: 0 auto;
-
         position: absolute;
 
         // Title should be placed under the content.

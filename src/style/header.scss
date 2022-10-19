@@ -2,7 +2,7 @@
 
 .c-header {
     &__title {
-        @extend .u-hide;
+        @extend %u-hide;
     }
 
     &__img {

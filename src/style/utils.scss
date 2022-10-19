@@ -1,5 +1,9 @@
 // Hide the element – only organize for
 // screen readers and outline generators purpose.
-.u-hide {
+%u-hide {
     display: none;
+}
+
+.u-hide {
+    @extend %u-hide;
 }
