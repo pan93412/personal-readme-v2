@@ -1,9 +1,7 @@
 declare global {
   var module: {
-    hot: {
-      accept: () => void;
-    } | null,
-  } | null;
+    hot: { accept: () => void; } | null;
+  };
 }
 
 /**
