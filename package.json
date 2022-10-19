@@ -4,6 +4,7 @@
   "description": "The web version of my GitHub README profile.",
   "scripts": {
     "dev": "parcel",
+    "check": "tsc --noEmit",
     "build": "parcel build",
     "lint": "eslint . && stylelint **/*.{css,scss}",
     "lint:fix": "eslint . --fix && stylelint **/*.{css,scss} --fix",
