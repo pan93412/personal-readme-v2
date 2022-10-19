@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "parcel",
     "check": "tsc --noEmit",
-    "build": "parcel build",
+    "build": "rm -rf dist && parcel build",
     "lint": "eslint . && stylelint **/*.{css,scss}",
     "lint:fix": "eslint . --fix && stylelint **/*.{css,scss} --fix",
     "fmt": "prettier -w .",
