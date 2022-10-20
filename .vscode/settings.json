@@ -2,5 +2,7 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "stylelint.validate": ["css", "scss"]
+  "stylelint.validate": ["css", "scss"],
+  "html-css-class-completion.enableScssFindUsage": true,
+  "html-css-class-completion.enableEmmetSupport": true
 }
