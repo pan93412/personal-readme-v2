@@ -9,7 +9,8 @@
     "lint": "eslint . && stylelint **/*.{css,scss}",
     "lint:fix": "eslint . --fix && stylelint **/*.{css,scss} --fix",
     "fmt": "prettier -w .",
-    "fmt:c": "prettier -c ."
+    "fmt:c": "prettier -c .",
+    "pack:hw": "fish utils/pack.fish"
   },
   "keywords": [],
   "author": "pan93412",
