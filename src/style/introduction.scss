@@ -1,6 +1,7 @@
+/** @define Introduction */
 @use "partials/introduction/grid";
 
-.l-main {
+.Introduction {
   display: grid;
   gap: 0 2rem; // only column gap is needed
 }

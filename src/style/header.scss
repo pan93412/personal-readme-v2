@@ -1,11 +1,12 @@
+/* @define Header */
 @use "utils";
 
-.c-header {
-  &__title {
+.Header {
+  &-title {
     @extend %u-hide;
   }
 
-  &__img {
+  &-img {
     width: 100%;
   }
 }

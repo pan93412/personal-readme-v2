@@ -5,7 +5,7 @@ $card-corner-radius: calc($base-padding / 3);
 @mixin card-configuration {
   background-color: #374151;
 
-  &__title {
+  &-title {
     // Title offset relative to the card.
     left: 10px;
     top: 10px;
@@ -14,19 +14,23 @@ $card-corner-radius: calc($base-padding / 3);
   }
 }
 
+/* @define Cards */
+
 /* The layout for placing c-card */
-.l-cards {
+.Cards {
   display: flex;
   flex-direction: column;
   gap: $base-padding;
 }
 
-.l-cards--row {
+.Cards.is-row {
   flex-direction: row;
 }
 
+/* @define Card */
+
 /* A card for this page. */
-.c-card {
+.Card {
   padding: $base-padding;
   border-radius: $card-corner-radius;
 
@@ -34,7 +38,7 @@ $card-corner-radius: calc($base-padding / 3);
   position: relative;
   overflow: hidden; // Hide the overflowed title.
 
-  &__title {
+  &-title {
     // Reset the `title` style.
     line-height: 100%;
     margin-block: 0 auto;
@@ -44,10 +48,10 @@ $card-corner-radius: calc($base-padding / 3);
     z-index: 0;
   }
 
-  &__desc {
+  &-desc {
     margin-block: 0;
 
-    // See `&__title`.
+    // See `&-title`.
     z-index: 1;
   }
 

@@ -4,6 +4,7 @@
   display: none;
 }
 
+/* @define utilities */
 .u-hide {
   @extend %u-hide;
 }
