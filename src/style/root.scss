@@ -10,7 +10,11 @@ body {
 }
 
 a {
-  color: rgb(169 182 242);
+  color: hsl(229deg 74% 81%);
+
+  &:visited {
+    color: hsl(229deg 74% 90%);
+  }
 }
 
 // We use '!important' here to override

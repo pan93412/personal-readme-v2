@@ -1,0 +1,84 @@
+/**
+ * The modern list for enhancing the reading experience.
+ *
+ * The `ModernList` is recommended to apply on `ul` and `ol`, and you should
+ * apply the class `.ModernListEl` to the list entries (li children).
+ *
+ * A list entry consist of two elements `.ModernListEl-title` – the
+ * title of this list, and the `.ModernListEl-content` – the content of this list.
+ * For example: `- GitHub: pan93412`, the `title` is `GitHub: `, while the `content`
+ * is `pan93412`.
+ *
+ * The color of `-title` badge can be customized by attribute `data-color`.
+ * See the source code for available colors.
+ */
+
+@use "sass:map";
+
+// The available color table.
+$color-table: (
+  "gray": (
+    "background-color": hsl(0deg 0% 25%),
+    "color": hsl(0deg 0% 95%),
+  ),
+  "green": (
+    "background-color": hsl(90deg 50% 25%),
+    "color": hsl(90deg 50% 95%),
+  ),
+  "blue": (
+    "background-color": hsl(210deg 50% 25%),
+    "color": hsl(242deg 50% 95%),
+  ),
+  "cyan": (
+    "background-color": hsl(185deg 50% 25%),
+    "color": hsl(185deg 50% 95%),
+  ),
+  "purple": (
+    "background-color": hsl(276deg 50% 25%),
+    "color": hsl(276deg 50% 95%),
+  ),
+);
+$default-color: map.get($color-table, "gray");
+
+@mixin pick-color-from-map($map) {
+  background-color: map.get($map, "background-color");
+  color: map.get($map, "color");
+}
+
+/* @define BadgedList */
+
+.BadgedList {
+  // We won't preserve the list style and replace it to the badge instead.
+  list-style-type: none;
+  padding: 1px 1.25em;
+}
+
+/* @define BadgedListEl */
+
+.BadgedListEl {
+  &-title {
+    padding: 0.1em 0.6em;
+    border-radius: 0.2em;
+
+    @each $color, $map in $color-table {
+      // This is not a valid BEM syntax – the correct way should be `is-#[color]`.
+      // It is just for practice the attribute syntax & the intuitive syntax.
+      /* stylelint-disable-next-line plugin/selector-bem-pattern */
+      &[color = #{ $color }] {
+        @include pick-color-from-map($map);
+      }
+    }
+
+    // The default configuration of the "-title" badge.
+    &:not([color]) {
+      @include pick-color-from-map($default-color);
+    }
+  }
+
+  // Add padding between the list items. As it uses `:not`, we disable this rule
+  // until it got supported.
+  /* stylelint-disable-next-line plugin/selector-bem-pattern */
+  .BadgedList > &:not(:last-child) {
+    margin-bottom: 0.25em;
+  }
+}
