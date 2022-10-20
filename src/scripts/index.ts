@@ -9,7 +9,3 @@ declare global {
 if (process.env.NODE_ENV !== 'production') {
   import("./hotreload").then(( { initHotReload }) => initHotReload());
 }
-
-import("./autolink").then((module) => {
-  module.initAutoLink();
-});
