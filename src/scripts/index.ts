@@ -4,5 +4,5 @@ import { initHotReload } from "./hotreload";
 initHotReload();
 
 import("./autolink").then((module) => {
-    module.initAutoLink();
+  module.initAutoLink();
 });

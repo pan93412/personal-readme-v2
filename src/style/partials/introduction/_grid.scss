@@ -1,40 +1,41 @@
-@use '../blocks' as b;
+@use "../blocks" as b;
 
 @mixin gridarea($name) {
-    &__#{ $name } {
-        grid-area: $name;
-    }
+  &__#{ $name } {
+    grid-area: $name;
+  }
 }
 
 .l-main {
-    // The template optimized for mobiles.
+  // The template optimized for mobiles.
+  grid-template:
+    "brief"
+    "skills"
+    "links"
+    "contacts"
+    "sponsor";
+
+  @include b.sm-block {
+    // The template optimized for desktop.
     grid-template:
-        "brief"
-        "skills"
-        "links"
-        "contacts"
-        "sponsor";
+      "brief brief"
+      "links skills"
+      "contacts skills"
+      "sponsor sponsor" / 1fr 1fr;
+  }
+
+  @each $area in (brief, skills, contacts, links, sponsor) {
+    @include gridarea($area);
+  }
+
+  // brief & sponsor: center, big block
+  &__brief,
+  &__sponsor {
+    text-align: center;
+    margin: 0.5rem auto;
 
     @include b.sm-block {
-        // The template optimized for desktop.
-        grid-template:
-            "brief brief"
-            "links skills"
-            "contacts skills"
-            "sponsor sponsor" / 1fr 1fr;
+      width: 75%;
     }
-
-    @each $area in (brief, skills, contacts, links, sponsor) {
-        @include gridarea($area);
-    }
-
-    // brief & sponsor: center, big block
-    &__brief, &__sponsor {
-        text-align: center;
-        margin: 0.5rem auto;
-
-        @include b.sm-block {
-            width: 75%;
-        }
-    }
+  }
 }

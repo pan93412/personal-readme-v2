@@ -1,27 +1,27 @@
-@use 'partials/variables' as v;
-@use 'partials/blocks' as b;
+@use "partials/variables" as v;
+@use "partials/blocks" as b;
 
 $line-height: 1.5;
-$font-preference:
-    "HarmonyOS Sans TC", "PingFang TC", "微軟正黑體", system-ui, -apple-system,
-    blinkmacsystemfont, 'Segoe UI', roboto, oxygen, ubuntu, cantarell, 'Open Sans',
-    'Helvetica Neue', sans-serif;
+$font-preference: "HarmonyOS Sans TC", "PingFang TC", "微軟正黑體", system-ui,
+  -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu,
+  cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
 .l-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    p, li {
-        line-height: $line-height;
+  p,
+  li {
+    line-height: $line-height;
+  }
+
+  font-family: $font-preference;
+
+  &__content {
+    width: 100%;
+
+    @include b.sm-block {
+      width: v.$sm-width;
     }
-
-    font-family: $font-preference;
-
-    &__content {
-        width: 100%;
-
-        @include b.sm-block {
-            width: v.$sm-width;
-        }
-    }
+  }
 }

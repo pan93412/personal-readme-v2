@@ -1,15 +1,16 @@
 body {
-    background-color: #1F2937;
-    color: rgb(239 239 239);
+  background-color: #1f2937;
+  color: rgb(239 239 239);
 }
 
 a {
-    color: rgb(169 182 242);
+  color: rgb(169 182 242);
 }
 
 // We use '!important' here to override
 // HarmonyOS Sans' rule, which forcibly
 // sets the code blocks to HarmonyOS Sans.
-code, pre {
-    font-family: "IBM Plex Mono", 'Courier New', Courier, monospace !important;
+code,
+pre {
+  font-family: "IBM Plex Mono", "Courier New", Courier, monospace !important;
 }

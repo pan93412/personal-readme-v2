@@ -3,53 +3,53 @@ $gap-between-cards: $base-padding;
 $card-corner-radius: calc($base-padding / 3);
 
 @mixin card-configuration {
-    background-color: #374151;
+  background-color: #374151;
 
-    &__title {
-        // Title offset relative to the card.
-        left: 10px;
-        top: 10px;
-        opacity: 0.2;
-        font-size: 3em;
-    }
+  &__title {
+    // Title offset relative to the card.
+    left: 10px;
+    top: 10px;
+    opacity: 0.2;
+    font-size: 3em;
+  }
 }
 
 /* The layout for placing c-card */
 .l-cards {
-    display: flex;
-    flex-direction: column;
-    gap: $base-padding;
+  display: flex;
+  flex-direction: column;
+  gap: $base-padding;
 }
 
 .l-cards--row {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 /* A card for this page. */
 .c-card {
-    padding: $base-padding;
-    border-radius: $card-corner-radius;
+  padding: $base-padding;
+  border-radius: $card-corner-radius;
 
-    // Make the following title “relative” to our card.
-    position: relative;
-    overflow: hidden;  // Hide the overflowed title.
+  // Make the following title “relative” to our card.
+  position: relative;
+  overflow: hidden; // Hide the overflowed title.
 
-    &__title {
-        // Reset the `title` style.
-        line-height: 100%;
-        margin-block: 0 auto;
-        position: absolute;
+  &__title {
+    // Reset the `title` style.
+    line-height: 100%;
+    margin-block: 0 auto;
+    position: absolute;
 
-        // Title should be placed under the content.
-        z-index: 0;
-    }
+    // Title should be placed under the content.
+    z-index: 0;
+  }
 
-    &__desc {
-        margin-block: 0;
+  &__desc {
+    margin-block: 0;
 
-        // See `&__title`.
-        z-index: 1;
-    }
+    // See `&__title`.
+    z-index: 1;
+  }
 
-    @include card-configuration;
+  @include card-configuration;
 }
