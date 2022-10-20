@@ -1,5 +1,5 @@
 declare global {
-  var module: {
+  const module: {
     hot: { accept: () => void } | null;
   };
 }

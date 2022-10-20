@@ -1,11 +1,11 @@
 export {};
 
 declare global {
-  var process: {
+  const process: {
     env: { NODE_ENV: string };
   };
-};
+}
 
-if (process.env.NODE_ENV !== 'production') {
-  import("./hotreload").then(( { initHotReload }) => initHotReload());
+if (process.env.NODE_ENV !== "production") {
+  import("./hotreload").then(({ initHotReload }) => initHotReload());
 }
