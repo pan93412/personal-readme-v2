@@ -64,7 +64,7 @@ $default-color: map.get($color-table, "gray");
       // This is not a valid BEM syntax – the correct way should be `is-#[color]`.
       // It is just for practice the attribute syntax & the intuitive syntax.
       /* stylelint-disable-next-line plugin/selector-bem-pattern */
-      &[color = #{ $color }] {
+      &[color="#{ $color }"] {
         @include pick-color-from-map($map);
       }
     }
