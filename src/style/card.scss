@@ -47,7 +47,7 @@ $card-corner-radius: calc($base-padding / 3);
     &__desc {
         margin-block: 0;
 
-        // See `o-title`.
+        // See `&__title`.
         z-index: 1;
     }
 
