@@ -14,19 +14,19 @@ $card-corner-radius: calc($base-padding / 3);
     }
 }
 
-/* The layout for placing c-skill-card */
-.l-skill-cards {
+/* The layout for placing c-card */
+.l-cards {
     display: flex;
     flex-direction: column;
     gap: $base-padding;
 }
 
-.l-still-cards--row {
+.l-cards--row {
     flex-direction: row;
 }
 
-/* A card for showing my skills. */
-.c-skill-card {
+/* A card for this page. */
+.c-card {
     padding: $base-padding;
     border-radius: $card-corner-radius;
 
