@@ -163,7 +163,7 @@
   \begin{verbatim}
     <nav class="Navbar w-full flex justify-between">
       <div class="Navbar-title">...</div>
-      <ul class="Navbar-navArea">...</ul>
+      <ul class="Navbar-navArea list-none flex gap-3">...</ul>
       <div class="Navbar-functions">...</div>
     </nav>
   \end{verbatim}
@@ -179,9 +179,8 @@
     \textbf{很久沒寫 Vanilla JS，回到框架前的世界了。}
   \end{center}
   上次熱衷於如此「簡樸的 Tech Stack」\footnote{相對來說。其實跟很多微前端相比還是很「重」了。}，
-  已經是高中一年級的事情了——那時候剛入門前端不久，喜歡用 Bulma、Vanilla JS，不用框架地刻出一個個小工具。
-
-  　　雖然這些小工具都不太「實用」，但卻是我前端生涯最快樂的時候：
+  已經是高中一年級的事情了——那時候剛入門前端不久，喜歡用 Bulma、Vanilla JS，
+  不用框架地刻出一個個小工具。雖然這些小工具都不太「實用」，但卻是我前端生涯最快樂的時候：
   沒有「best practice」的約束，可以盡情地揮灑自己的想法。
 
   　　後來學了 React 和一些前端技術，並且將前端「工程化」之後，寫程式的壓力便與日俱增。
@@ -190,14 +189,14 @@
   寫程式要考慮的點（技術選型）變多了，開發一個專案的壓力變大了。
 
   　　這個專案是我最近第一次嘗試「用回傳統的 HTML、CSS 和 JS 開發小 app。」
-  說實話，盡情的對專案進行各種修改，而不用花很多時間在「專案配置」上，挺快樂的。
+  說實話，盡情的對專案進行各種修改，而不用花很多時間在「專案配置」上，挺快樂的——
+  我似乎找回了高中時對網頁開發熱情、不停嘗試各種新玩意的我。因此，這個專案的開發時長
+  也算是近期專案中最長的。
 
-  　　這次的經驗也讓我省思：「究竟有沒有必要花太多時間，在『專案草創』階段就花很多時間
+  　　這使我省思：「究竟有沒有必要花太多時間，在『專案草創』階段就花很多時間
   在擬合所謂的『best practice』上？」彼時剛好業主把某個專案轉交給我完成，而我在這個專案中，決定不要想著要在
   「專案開始之初就配置完一切項目」——而是先從 Essential 的結構開始開發，
-  再慢慢根據開發規模添入工具。
-
-  　　事實證明這種開發模式比起之前的「配置完一切」來得比較沒有壓力，
+  再慢慢根據開發規模添入工具。事實證明這種開發模式比起之前的「配置完一切」來得比較沒有壓力，
   也可以不用一直跟組建工具抗爭。算是開發 Introduction 的另一種收穫吧。
 
   \subsection{意外的收穫：學習用 \LaTeX 撰寫這次的「動機」}
@@ -205,16 +204,32 @@
 
         $$y = f(x) = ax+b$$
 
-  　　而我原本是想使用 \textit{Markdown} 來寫這次的 README，但配置
-  Pandoc 真的好累，而且效果不符預期。但配置 Pandoc 的過程中，我突然想到：
-  「既然 Pandoc 也是把 Markdown 編譯成 \LaTeX，再把 \LaTeX 編譯成 PDF，
-  那我為何不要直接用 \LaTeX 排版呢？」
+  　　而我原本是想使用 \href{https://commonmark.org}{Markdown} 來寫這次的 README，可是光 Markdown
+  太單調了，輸出成 PDF 應該會比較酷，所以我花了點時間研究 \href{https://pandoc.org}{Pandoc}、
+  配上 \href{https://www.overleaf.com/learn/latex/XeLaTeX}{Xe\LaTeX}、
+  設定 \href{https://ithelp.ithome.com.tw/articles/10242863}{\textit{Front Matter}}……
+  然而 Pandoc 輸出的內容一直不是想要的樣子（圖片錯位、排版超出文件範圍……）。
+  不過，配置 Pandoc 的過程中，我突然想到：「既然 Pandoc 也是把 Markdown 編譯成 \LaTeX，
+  再把 \LaTeX 編譯成 PDF，那我為何不要直接用 \LaTeX 排版呢？」
 
-  於是，我就開始根據網路上的教學，一步步引入套件、尋找問題、撰寫內容。
-  說實話雖然 \LaTeX 的入門門檻挺高的（如何找和安裝套件、處理 CJK 字元問題 etc.），
+  　　於是，我就開始根據網路上的教學，一步步引入套件、尋找問題、撰寫內容。
+  雖然 \LaTeX 的入門門檻挺高的（如何找和安裝套件、處理 CJK 字元問題 etc.），
   但處理完前置作業之後，\LaTeX 排版居然在某些情況下比 Word 還好用：
-  可以輕鬆撰寫 code block、也可以做出很多程式化的自訂。即使我並沒有寫數學文件
-  和論文的需求，之後或許也可以考慮用 \LaTeX 寫一些小東西 \emoji{joy}。
+  可以輕鬆撰寫 code block、也可以做出很多程式化的自訂（比如引入組建當時的 Git commit hash）。
+  即使我並沒有寫數學文件和論文的需求，之後或許也可以考慮用 \LaTeX 寫一些小文章 \emoji{joy}。
+
+  \begin{quote}
+    \textbf{後記：}後來寫 \code{utils/build-readme.fish} script 的時候，
+    還遇到了很多亂七八糟的問題 \emoji{cry}。這次除了學了「怎麼寫 \LaTeX」之外，
+    還學了怎麼配置 Lua\LaTeX、怎麼使用 \code{luatexja} 套件協助組建，以及一點點
+    參數的使用。也算是另外的收穫吧 \emoji{joy}
+
+    另外後期就把 Xe\LaTeX 扔掉，改用 \href{https://www.luatex.org}{Lua\LaTeX} 了。
+    主要是 \href{https://tex.stackexchange.com/questions/126206/why-choose-lualatex-over-xelatex}{後者有著更好的擴充性和相容性}。
+    最重要的點，是它可以使用 \code{emoji} 套件
+    \emoji{partying-face}！不過缺點是編譯速度變慢了一點，
+    之後再思考怎麼 optimize。
+  \end{quote}
 
   \newpage
 
