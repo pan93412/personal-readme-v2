@@ -15,6 +15,7 @@
   "keywords": [],
   "author": "pan93412",
   "license": "AGPL-3.0-or-later",
+  "packageManager": "pnpm@7.14.0",
   "devDependencies": {
     "@parcel/core": "^2.7.0",
     "@parcel/transformer-sass": "^2.7.0",
