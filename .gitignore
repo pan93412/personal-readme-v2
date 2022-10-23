@@ -3,3 +3,7 @@ node_modules/
 dist/
 dist_hw/
 .DS_Store
+
+docs/readme/*
+!docs/readme/readme.tex
+!docs/readme/images/
