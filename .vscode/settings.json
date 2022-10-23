@@ -4,5 +4,16 @@
   "scss.validate": false,
   "stylelint.validate": ["css", "scss"],
   "html-css-class-completion.enableScssFindUsage": true,
-  "html-css-class-completion.enableEmmetSupport": true
+  "html-css-class-completion.enableEmmetSupport": true,
+  "latex-workshop.latex.tools": [{
+    "name": "latexmk",
+    "command": "latexmk",
+    "args": [
+      "-lualatex",
+      "-synctex=1",
+      "-interaction=nonstopmode",
+      "-file-line-error",
+      "%DOC%"
+    ]
+  }],
 }
