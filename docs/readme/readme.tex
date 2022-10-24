@@ -4,6 +4,7 @@
 
 % Layout Optimization
 \usepackage{parskip}
+\usepackage{multicol}
 
 % PDF enhancement
 \usepackage{hyperref}
@@ -32,12 +33,6 @@
 \begin{document}
   % Monospace
   \newcommand{\code}[1]{\texttt{#1}}
-
-  % Image block
-  \newcommand{\imgblock}[1]{\begin{figure}[H]
-    \includegraphics[width=12cm]{#1}
-    \centering
-  \end{figure}}
 
   \maketitle
 
@@ -118,13 +113,19 @@
   \section{Screenshots}
 
   \subsection*{Desktop}
-  \imgblock{desktop.png}
+  \begin{figure}[ht]
+    \includegraphics[width=\linewidth]{desktop.png}
+  \end{figure}
 
-  \subsection*{Mobile}
-  \imgblock{mobile.png}
+  \begin{figure}[ht]
+    \begin{multicols}{2}
+      \subsection*{Mobile}
+      \includegraphics[width=\linewidth]{mobile.png}
 
-  \subsection*{Mobile, without CSS}
-  \imgblock{without-css.png}
+      \subsection*{Mobile, without CSS}
+      \includegraphics[width=\linewidth]{without-css.png}
+    \end{multicols}
+  \end{figure}
 
   \newpage
 
@@ -200,6 +201,8 @@
   再慢慢根據開發規模添入工具。事實證明這種開發模式比起之前的「配置完一切」來得比較沒有壓力，
   也可以不用一直跟組建工具抗爭。算是開發 Introduction 的另一種收穫吧。
 
+  \newpage
+
   \subsection{意外的收穫：學習用 \LaTeX 撰寫這次的「動機」}
   以前就會用 \LaTeX 寫數學公式，但從來沒有用過 \LaTeX 排版。
 
@@ -225,14 +228,14 @@
     還學了怎麼配置 Lua\LaTeX、怎麼使用 \code{latexmk} 套件協助組建，以及一點點
     參數的使用。也算是另外的收穫吧 \emoji{joy}
 
-    \newpage % https://tex.stackexchange.com/questions/54136/hyperref-link-spans-a-pagebreak-looks-ugly
-
     另外後期就把 Xe\LaTeX 扔掉，改用 \href{https://www.luatex.org}{Lua\LaTeX} 了。
     主要是 \href{https://tex.stackexchange.com/questions/126206/why-choose-lualatex-over-xelatex}{後者有著更好的擴充性和相容性}。
     最重要的點，是它可以使用 \code{emoji} 套件
     \emoji{partying-face}！不過缺點是編譯速度變慢了一點，
     之後再思考怎麼 optimize。
   \end{quote}
+
+  \newpage
 
   \section{Source Code and License}
 
