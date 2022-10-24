@@ -1,3 +1,5 @@
+@use "partials/blocks" as b;
+
 $line-height: 1.5;
 $font-preference: "HarmonyOS Sans TC", "PingFang TC", "微軟正黑體", system-ui,
   -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu,
@@ -31,6 +33,8 @@ li {
 }
 
 h2 {
-  margin-block: 0;
-  margin-block-end: 0.83em;
+  @include b.sm-block {
+    margin-block: 0;
+    margin-block-end: 0.83em;
+  }
 }
