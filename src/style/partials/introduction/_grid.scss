@@ -9,7 +9,7 @@
     "skills"
     "links"
     "contacts"
-    "sponsor";
+    "sponsor" / 100%;
 
   @include b.sm-block {
     // The template optimized for desktop.
@@ -37,5 +37,10 @@
     @include b.sm-block {
       width: 75%;
     }
+  }
+
+  // Fix the ETH address overflowing.
+  &-sponsor {
+    word-break: break-all;
   }
 }
